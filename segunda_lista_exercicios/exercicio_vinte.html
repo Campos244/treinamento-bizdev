@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+
+<script>
+
+    let chaveDeSeguranca = 9999;
+
+    let mensagem = prompt("Senha incorreta. Seu cartão foi bloqueado. Se deseja ir a uma agência, digite “A” ou se deseja desbloquear com sua chave de segurança, digite “D");
+
+    if (mensagem == "D" || mensagem == "d") {
+        let digitarChaveDeSeguranca = prompt("Digite a chave de segurança que foi enviada para seu e-mail cadastrado");
+        if (digitarChaveDeSeguranca == chaveDeSeguranca) {
+            alert("Enviamos uma mensagem para o email cadastrado para a redefinição de senha!")
+        } else {
+            alert("Chave de segurança digitada incorreta! Visite uma de nossas agências para a redefinição de senhas");
+        }
+    } else {
+        alert("Será um prazer continuar o atendimento em uma de nossas agências!");
+    }
+
+</script>

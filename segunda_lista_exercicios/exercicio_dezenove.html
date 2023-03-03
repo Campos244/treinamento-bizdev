@@ -1,0 +1,36 @@
+<meta charset = "UTF-8">
+
+<script>
+let sorteioEntreUmSessenta;
+let i = 1;
+let limiteSorteios = 6;
+let vetorNumerosSorteados = [];
+
+function sorteiaNumerosMegaSena(){
+    while(i <= limiteSorteios ){
+    for (sorteioEntreUmSessenta  = 1; sorteioEntreUmSessenta <= 6; sorteioEntreUmSessenta++){
+     sorteioEntreUmSessenta =  Math.floor(Math.random() * 60);
+     console.log(sorteioEntreUmSessenta);
+     vetorNumerosSorteados.push(sorteioEntreUmSessenta);
+    }
+    i++;
+}
+}
+
+function mostrarVetorNumerosSorteados(){
+    console.log(vetorNumerosSorteados);
+}
+
+function ordernarNumerosSorteados(){
+    console.log("O primeiro número sorteado foi: " +vetorNumerosSorteados[0]);
+    console.log("O segundo número sorteado foi: " +vetorNumerosSorteados[1]);
+    console.log("O terceiro número sorteado foi: " +vetorNumerosSorteados[2]);
+    console.log("O quarto número sorteado foi: " +vetorNumerosSorteados[3]);
+    console.log("O quinto número sorteado foi: " +vetorNumerosSorteados[4]);
+    console.log("O sexto número sorteado foi: " +vetorNumerosSorteados[5]);
+}
+
+sorteiaNumerosMegaSena();
+mostrarVetorNumerosSorteados();
+ordernarNumerosSorteados();
+</script>

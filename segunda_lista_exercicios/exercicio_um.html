@@ -1,0 +1,40 @@
+<meta charset = "UTF-8">
+
+<script>
+
+function imparOuPar(){
+for(var numero = 1; numero <= 50; numero++){
+    if(numero % 2 == 0){
+        document.write( +numero + " é par <br>"); 
+    } else if (numero % 2 != 0){
+        document.write( + numero + " é impar <br>");
+    }
+}
+}
+
+function multiplosDeTres(){
+    for(var numero = 1; numero <= 100; numero ++){
+        if (numero % 3 == 0){
+        document.write(+numero + "<br>"); 
+        }
+    }
+}
+
+function  sequenciaDecrescente(){
+    var sequenciaNumeros = 100;
+    
+    while( sequenciaNumeros >= 0){
+       document.write(+sequenciaNumeros + "<br>");
+       sequenciaNumeros= sequenciaNumeros - 2;
+    }
+    }
+
+
+imparOuPar();
+document.write("<br><br><br>");
+multiplosDeTres();
+document.write("<br><br><br>");
+sequenciaDecrescente();
+
+
+</script>

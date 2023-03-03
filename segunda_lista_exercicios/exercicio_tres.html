@@ -1,0 +1,26 @@
+<meta charset = "UTF-8">
+
+<script>
+
+var quantidadeAlunos = 0;
+var somaNotas = 0;
+
+var notaAtual = prompt("Insira as notas de seus alunos. Quando acabar, digite RESULTADO");
+
+while (notaAtual != "RESULTADO") {
+somaNotas += parseInt(notaAtual);
+quantidadeAlunos++;
+
+notaAtual = prompt("Insira as notas de seus alunos. Quando acabar, digite RESULTADO");
+}
+
+if (quantidadeAlunos > 0) {
+var media = (somaNotas / quantidadeAlunos);
+console.log(media.toFixed(1));
+document.write("Média calculada: " +media.toFixed(1))
+} else {
+document.write("Impossível calcular média! Nenhuma nota digitada.")
+
+}
+
+</script>

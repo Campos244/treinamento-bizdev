@@ -1,0 +1,71 @@
+<meta charset="UTF-8">
+<script>
+
+    var alunoIndicado1 = "Augusto";
+    var alunoIndicado2 = "Afonso";
+    var alunoIndicado3 = "Tomás";
+
+    var idadeAlunoIndicado1 = 17.4;
+    var idadeAlunoIndicado2 = 17.6;
+    var idadeAlunoIndicado3 = 16;
+
+    var mediaPortuguesaluno1 = 8;
+    var mediaPortuguesaluno2 = 8;
+    var mediaPortuguesaluno3 = 8;
+
+    var mediaMatematicaAluno1 = 9;
+    var mediaMatematicaAluno2 = 9;
+    var mediaMatematicaAluno3 = 9;
+
+
+    function resultadoMediasPortugues() {
+        if (mediaPortuguesaluno1 > mediaPortuguesaluno2 && mediaPortuguesaluno1 > mediaPortuguesaluno3) {
+            document.write("A maior media de português foi do aluno " + alunoIndicado1 + " com nota " + mediaPortuguesaluno1);
+        } else if (mediaPortuguesaluno2 > mediaPortuguesaluno1 && mediaPortuguesaluno2 > mediaPortuguesaluno3) {
+            document.write("A maior media de português foi do aluno " + alunoIndicado2 + " com nota " + mediaPortuguesaluno2);
+        } else if (mediaPortuguesaluno3 > mediaPortuguesaluno2 && mediaPortuguesaluno3 > mediaPortuguesaluno1) {
+            document.write("A maior media de português foi do aluno " + alunoIndicado3 + " com nota " + mediaPortuguesaluno3);
+        }
+    }
+
+    function calcularMatematica() {
+        if (mediaMatematicaAluno1 > mediaMatematicaAluno2 && mediaMatematicaAluno1 > mediaMatematicaAluno3) {
+            document.write("Com o desempate da média de matemática, a maior média foi de " + alunoIndicado1 + " com média de " + mediaMatematicaAluno1);
+        } else if (mediaMatematicaAluno2 > mediaMatematicaAluno1 && mediaMatematicaAluno2 > mediaMatematicaAluno3) {
+            document.write("Com o desempate da média de matemática, a maior média foi de " + alunoIndicado2 + " com média de " + mediaMatematicaAluno2);
+        } else if (mediaMatematicaAluno3 > mediaPortuguesaluno1 && mediaMatematicaAluno3 > mediaMatematicaAluno2) {
+            document.write("Com o desempate da média de matemática, a maior média foi de " + alunoIndicado3 + " com média de " + mediaMatematicaAluno3);
+        } else {
+            desempateComparandoIdades();
+        }
+    }
+
+    function resultadoMatematica() {
+        if (mediaPortuguesaluno1 == mediaPortuguesaluno2 && mediaPortuguesaluno1 == mediaPortuguesaluno3) {
+            calcularMatematica();
+        }
+    }
+
+    function desempateComparandoIdades() {
+        if (mediaMatematicaAluno1 == mediaMatematicaAluno2 && mediaMatematicaAluno2 == mediaMatematicaAluno3) {
+            verificarIdade();
+        } else {
+            alert("Resultado da maior média finalizado! ")
+        }
+    }
+
+    function verificarIdade() {
+        if (idadeAlunoIndicado1 > idadeAlunoIndicado2 && idadeAlunoIndicado1 > idadeAlunoIndicado3) {
+            document.write(`Usando a idade como desempate, o aluno ${alunoIndicado1}  teve a maior media da sala!`);
+        } else if (idadeAlunoIndicado2 > idadeAlunoIndicado1 && idadeAlunoIndicado2 > idadeAlunoIndicado3) {
+            document.write(`Usando a idade como desempate, o aluno ${alunoIndicado2}  teve a maior media da sala!`)
+        } else {
+            document.write(`Usando a idade como desempate, o aluno ${alunoIndicado3}  teve a maior media da sala!`);
+        }
+    }
+
+    resultadoMediasPortugues();
+    document.write("<br>");
+    resultadoMatematica();
+
+</script>

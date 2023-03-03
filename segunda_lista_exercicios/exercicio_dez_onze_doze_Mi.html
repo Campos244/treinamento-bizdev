@@ -1,0 +1,36 @@
+<meta charset= "UTF-8">
+<script>
+
+let petsCadastrados = 0
+
+        function cadastraPet() {
+            var nomePet = prompt("Qual o nome do seu animalzinho?");
+            var especiePet = prompt("Qual a espécie?");
+            var corPet = prompt("E a cor?");
+            var nomeTutor = prompt("Insira o nome do tutor:");
+            var telefoneTutor = prompt("Digite telefone para contato:");
+            
+            document.write(`
+                Nome do pet: ${nomePet}<br>
+                Espécie: ${especiePet}<br>
+                Cor: ${corPet}<br>
+                Dono(a): ${nomeTutor}<br>
+                Contato: ${telefoneTutor}<br><br>
+            `)
+
+            petsCadastrados++
+            console.log(petsCadastrados)
+            if(petsCadastrados < 3) {
+                verificaSePetsCadastradosEhMaiorQueTres()
+            }
+        }
+        cadastraPet()
+
+        function verificaSePetsCadastradosEhMaiorQueTres() {
+            var cadastrarOutroPet = prompt("Deseja cadastrar outro pet? \nDigite S para sim ou N para não")
+            if (cadastrarOutroPet == "S" || cadastrarOutroPet == "s") {
+                cadastraPet()
+            } 
+        }
+
+</script>

@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+<script>
+    function cadastro() {
+        let animaisCadastrados = 0;
+
+
+        while (animaisCadastrados < 3) {
+
+            var nomeTutor = prompt("Insira o nome do tutor:");
+            var telefoneContato = prompt("Digite telefone para contato:");
+            var nomePet = prompt("Qual o nome do seu animalzinho?");
+            var especiePet = prompt("Qual a espécie?");
+            var corPet = prompt("E a cor?");
+
+            document.write(`
+                Nome do pet: ${nomePet}<br>
+                Espécie: ${especiePet}<br>
+                Cor: ${corPet}<br>
+                Dono(a): ${nomeTutor}<br>
+                Contato: ${telefoneContato}<br><br>
+            `)
+
+            animaisCadastrados++;
+
+            console.log(animaisCadastrados)
+            if (animaisCadastrados >= 3) {
+            verificaSePetsCadastradosEMaiorQueTres();
+                
+            }
+        }
+    }
+    cadastro();
+
+    function verificaSePetsCadastradosEMaiorQueTres() {
+        var cadastrarOutroPet = prompt("Deseja cadastrar outro pet? \nDigite S para sim ou N para não")
+        if (cadastrarOutroPet == "S" || cadastrarOutroPet == "sim") {
+            var cadastroPremiumCartao = prompt("Para cadastrar mais animaizinhos, torne-se premium e cadastre seu cartão!");
+            cadastro()
+            document.write(`Cartão cadastrado: ${cadastroPremiumCartao}`);
+        }
+    }
+
+</script>

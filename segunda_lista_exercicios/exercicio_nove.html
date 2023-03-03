@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<script>
+
+    var mediaCalculada;
+    var nomeAluno = prompt("Digite o nome do aluno(a): ");
+    var notaProvaUm = parseInt(prompt("Nota que " + nomeAluno + " tirou na prova 1:"));
+    var notaProvaDois = parseInt(prompt("Nota que " + nomeAluno + " tirou na prova 2:"));
+    var notaTrabalho = parseInt(prompt("Nota que " + nomeAluno + " tirou no trabalho:"));
+
+
+
+    var mediaCalculada = ((notaProvaUm + notaProvaDois + notaTrabalho) / 3);
+    if (mediaCalculada >= 7) {
+        alert("A média calculada do aluno(a) " + nomeAluno + " é: " + mediaCalculada.toFixed(2));
+    }
+    else {
+        enviarEmailParaDiretoria();
+    }
+
+
+    function enviarEmailParaDiretoria() {
+        document.write("Prezada diretora. Por meio deste email, venho informar que " + nomeAluno + " não atingiu a média mínima, tendo como nota final: " + mediaCalculada.toFixed(2));
+    }
+
+    calcularMedia();
+
+</script>

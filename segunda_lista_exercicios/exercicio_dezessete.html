@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function cadastro() {
+
+        var cadastroDestino = prompt("Digite o destino da viagem");
+        var cadastroValorPassagens = parseInt(prompt("Valor das passagens"));
+        var cadastroDiasViagem = parseInt(prompt("Quantidade de dias na acomodação"));
+        var cadastroValorAcomodacao = parseInt(prompt("Digite o valor da diária"));
+        var totalValorDiasAcomodacao = (cadastroDiasViagem * cadastroValorAcomodacao);
+        var cadastroValorGuia = parseInt(prompt("Valor cobrado pelo guia"));
+        var totalGastosViagem = (cadastroValorPassagens + cadastroValorGuia + (cadastroDiasViagem * cadastroValorAcomodacao));
+
+        document.write("Destino " + cadastroDestino + "<br>");
+        document.write("Valor passagens: " + cadastroValorPassagens + "<br>");
+        document.write(cadastroDiasViagem + " dias " + "por " + totalValorDiasAcomodacao + "<br>");
+        document.write("Guia: " + cadastroValorGuia + "<br>");
+        document.write("Total de gastos" + totalGastosViagem + "<br><br>");
+
+        novoCadastro();
+
+    }
+
+    cadastro();
+
+    function novoCadastro() {
+        var novoCadastroViagem = prompt("Deseja cadastrar mais uma viagem?");
+        if (novoCadastroViagem == "SIM" || novoCadastroViagem == "sim") {
+            cadastro();
+        } else {
+            alert("Cadastro finalizado!");
+            document.write("Destino " + cadastroDestino + "<br>");
+            document.write("Valor passagens: " + cadastroValorPassagens + "<br>");
+            document.write(cadastroDiasViagem + " dias " + "por " + totalValorDiasAcomodacao + "<br>");
+            document.write("Guia: " + cadastroValorGuia + "<br>");
+            document.write("Total de gastos " + totalGastosViagem + "<br><br>");
+
+        }
+    }
+
+    novoCadastro();
+
+</script>

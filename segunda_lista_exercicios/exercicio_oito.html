@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+<script>
+
+    var totalCandidatos = 9;
+    var lista = [];
+
+    while (lista.length < totalCandidatos){
+         var fichaEscolhida = Math.round(Math.random() * totalCandidatos);
+         if (lista.indexOf(fichaEscolhida) == -1  && fichaEscolhida != 0){
+            lista.push(fichaEscolhida);
+         }
+    }
+    
+    document.write("candidato nº:" +lista + "<br>");
+    
+
+    /*var estaPresente = false;
+
+
+    for (var i = 0; i < lista.length; i++) {
+        console.log(lista[i])
+        if (lista[i] == 100) {
+            console.log("Número presente")
+            estaPresente = true;
+        }
+    }
+
+    if (estaPresente == false) {
+        lista.push(100);
+    }
+    console.log(lista);
+    console.log(estaPresente);
+*/
+</script>
