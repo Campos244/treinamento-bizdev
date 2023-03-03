@@ -1,0 +1,58 @@
+<meta charset="UTF-8">
+
+<script>
+
+var clientesBh = 23;
+var clientesSp = 12;
+var clientesBa = 11;
+var clientesMs = 10;
+var clientesPr = 8;
+
+var faturamentoBh = 2950;
+var faturamentoSp = 3950;
+var faturamentoBa = 1329;
+var faturamentoMs = 2412;
+var faturamentoPr = 626;
+
+var totalSomaCLientes = clientesBh + clientesSp + clientesBa + clientesMs + clientesPr;
+
+document.write('Nas capitais de BH, SP, BA, MS e PR, Jéssica possui '  +totalSomaCLientes + ' clientes.' + "<br><br>");
+
+var faturamentoClientePorCidadeBh = Math.round(faturamentoBh/clientesBh);
+var faturamentoClientePorCidadeSp = Math.round(faturamentoSp/clientesSp);
+var faturamentoClientePorCidadeBa = Math.round(faturamentoBa/clientesBa);
+var faturamentoClientePorCidadeMs = Math.round(faturamentoMs/clientesMs);
+var faturamentoClientePorCidadePr = Math.round(faturamentoPr/clientesPr);
+
+document.write("Faturamento médio por cliente:<br>");
+document.write("Belo Horizonte: " +faturamentoClientePorCidadeBh + "<br>");
+document.write("São Paulo: " +faturamentoClientePorCidadeSp + "<br>");
+document.write("Salvador: " +faturamentoClientePorCidadeBa + "<br>");
+document.write("Campo Grande: " +faturamentoClientePorCidadeMs + "<br>");
+document.write("Curítiba: " +faturamentoClientePorCidadePr + "<br><br>");
+
+faturamentoClientesTotal = faturamentoClientePorCidadeBh + faturamentoClientePorCidadeSp + faturamentoClientePorCidadeBa + faturamentoClientePorCidadeMs +  faturamentoClientePorCidadePr;
+var quantidadeClientes = 5;
+
+var mediaFaturamentoPorCLiente = faturamentoClientesTotal/quantidadeClientes;
+
+document.write("Faturamento médio por cliente nas cinco cidades onde Jéssica mais tem clientes ativos é de " + mediaFaturamentoPorCLiente + "<br><br>");
+
+var custosEnvioSp = 9;
+var custosEnviosGerais = 14;
+var porcentagemCustosProducao = 20/100;
+
+console.log(lucroBh = (2950 - (custosEnviosGerais * 23)) * .8);
+console.log(lucroSp = (3950 - (custosEnvioSp * 12)) * .8);
+console.log(lucroBa = (1329 - (custosEnviosGerais * 11 )) * .8);
+console.log(lucroMs = (2412 - (custosEnviosGerais * 10)) * .8);
+console.log(lucroPr = (626 - (custosEnviosGerais * 8)) * .8);
+
+document.write("Lucros por cidade: <br>");
+document.write("Lucros de BH: R$ " + Math.round(lucroBh) + "<br>");
+document.write("Lucros de SP: R$ " + Math.round(lucroSp) + "<br>");
+document.write("Lucros de BA: R$ " + Math.round(lucroBa) + "<br>");
+document.write("Lucros de MS: R$ " + Math.round(lucroMs) + "<br>");
+document.write("Lucros de PR: R$ " + Math.round(lucroPr) + "<br>");
+
+</script>

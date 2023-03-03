@@ -1,0 +1,26 @@
+<meta charset = "UTF-8">
+
+<script>
+
+var nome = prompt("Digite seu nome para efetuar login");
+var nome = nome.toString();
+var tempoCliente = prompt("Há quanto tempo você é cliente?");
+var credito = prompt("Atualmente, qual seu limite de crédito?");
+
+function validacaoEmprestimo(nome, tempoCliente, credito){
+    if (tempoCliente >= 2 && credito >= 1500){
+        tempoCliente == true;
+        credito == true;
+        document.write( nome + ", você pode contratar um empréstimo em nosso banco. Verifique a aba empréstimos para saber mais.")
+    } else if (tempoCliente == false && credito == true ) {
+        document.write( nome + ", você ainda não pode contratar um empréstimo por esse meio, pelo(s) seguinte(s) motivo(s): Tempo como cliente insufuciente");
+    } else if (tempoCliente == true && credito == false){
+        document.write( nome + ", você ainda não pode contratar um empréstimo por esse meio, pelo(s) seguinte(s) motivo(s): crédito insulficiente.")
+    } else{
+        document.write( nome + ", você ainda não pode contratar um empréstimo por esse meio, pelo(s) seguinte(s) motivo(s): Crédito e tempo como cliente insufucientes");
+    }
+}
+
+validacaoEmprestimo(nome, tempoCliente, credito);
+
+</script>

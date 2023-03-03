@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+
+<script>
+
+var nome = "Teresa";
+var telefone = "4002-8922";
+var convenio = false;
+var profissao = "secretária";
+var salario = parseInt(2500);
+
+if (convenio == true){
+    convenio = "e tem convênio médico";
+} else{
+    convenio = "e não possui convênio médico"; 
+}
+
+function apresentar (){
+document.write('Seu nome é ' +nome + '.' + ' Ela é '  +profissao + ' ' +convenio + '.' + ' Recebe ' +salario + ' por mês, caso queira entrar em contato com a mesma, ligue para o seguinte núemero ' +telefone + '.');
+}
+
+apresentar();
+
+</script>

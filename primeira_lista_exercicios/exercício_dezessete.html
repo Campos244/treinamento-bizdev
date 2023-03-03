@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<script>
+
+    var pontos;
+
+    function validaCadastro() {
+        var loginCadastro = prompt("Possui cadastro como cliente VIP em nosso site?");
+        if (loginCadastro == "Sim" || loginCadastro == "sim") {
+            var quantidadeCombustivelRequerida = prompt("Quanto deseja abastecer?");
+            var quantidadeCombustivelRequeridaConvertida = parseInt(quantidadeCombustivelRequerida)
+            //console.log(typeof quantidadeCombustivelRequeridaConvertida)
+            if (quantidadeCombustivelRequeridaConvertida >= 1 && quantidadeCombustivelRequeridaConvertida < 50) {
+                pontos = (quantidadeCombustivelRequeridaConvertida * 1);
+            } else if (quantidadeCombustivelRequeridaConvertida >= 50 && quantidadeCombustivelRequeridaConvertida < 100) {
+                pontos = (quantidadeCombustivelRequeridaConvertida * 1.50);
+            } else if (quantidadeCombustivelRequeridaConvertida >= 100) {
+                pontos = (quantidadeCombustivelRequeridaConvertida * 2);
+            }
+        } else {
+            alert("Cadastre-se em nosso site!");
+        }
+    }
+
+    function mostrarPontos() {
+        document.write("Você acumulou " + pontos + " pontos com o abastecimento de hoje");
+    }
+
+    validaCadastro();
+    mostrarPontos();
+
+</script>

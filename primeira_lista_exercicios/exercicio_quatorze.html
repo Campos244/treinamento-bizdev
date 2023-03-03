@@ -1,0 +1,14 @@
+<meta charset = "UTF-8">
+ <script>
+
+var idade = parseInt(prompt("Digite sua idade!"));
+
+if (idade <= 15){
+document.write("Você não tem a idade suficiente para votar.");
+} else if (idade == 16 || idade == 17 || idade >= 70){
+    document.write("De acordo com a sua idade, seu voto é opcional.");
+}
+ else if(idade >=18 && idade <70){
+    document.write("De acordo com a sua idade, você deve votar!");
+}
+ </script>

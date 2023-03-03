@@ -1,0 +1,24 @@
+<meta charset = "UTF-8">
+
+<script>
+
+var nomeCliente = "Teresa";
+var destino = "Espanha";
+var valorPassagens = 6300;
+var dias = 5;
+var diariaHotel = 400;
+var totalHotel = (dias * diariaHotel);
+var valorGuiaLocal = 500;
+var custoFixoXDias = 8800; 
+
+function emailAltomatico(nomeCliente, destino, valorPassagens, totalHotel, valorGuiaLocal, custoFixoXDias){
+var email = document.write("Olá, " + nomeCliente+ "." + " É um prazer termos você como cliente e estamos ansiosos para que sua viagem para " +destino +"possa ocorrer em breve!<br>" +
+"Estou te encaminhando os custos: <br>"
++ "As passagens ficarão em torno de R$" + valorPassagens + ", os custos para a acomodação de 5 dias serão de R$" +totalHotel + ". <br>" +
+"O guia local custará R$ " + valorGuiaLocal + ".<br>" +
+"Sua viagem custará R$ " + custoFixoXDias +"!");
+}
+
+emailAltomatico(nomeCliente, destino, valorPassagens, totalHotel, valorGuiaLocal, custoFixoXDias);
+
+</script>

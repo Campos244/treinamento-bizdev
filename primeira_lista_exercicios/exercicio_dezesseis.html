@@ -1,0 +1,29 @@
+<meta charset = "UTF-8">
+<script> 
+
+var baseTriangulo = 15;
+var baseRetangulo = 20;
+var alturaTriangulo = 35;
+var alturaRetangulo = 80;
+var pi = 3.1416;
+var raio = 16;
+
+function areaTriangulo(){
+   var areaTri = ((baseTriangulo * alturaTriangulo)/2);
+   document.write("A área do triângulo é de: " + areaTri + "cm^2 <br>");
+}
+
+function areaCirculo(){
+    var areacir = Math.round(pi * (raio**2));
+    document.write("A área do círculo é de: " + areacir + "cm^2 <br>");
+}
+
+function areaRetangulo(){
+    var areaRetan = (baseRetangulo * alturaRetangulo);
+    document.write("A área do retângulo é de: " + areaRetan + "cm^2 <br>");
+}
+
+areaRetangulo();
+areaCirculo();
+areaTriangulo();
+</script>
