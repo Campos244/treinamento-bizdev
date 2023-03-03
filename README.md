@@ -8,5 +8,5 @@
 ### Features
 
 - [x] Criação do readme
-- [ ] Subir códigos
+- [x] Adicionar lista de códigos número 1
 - [ ] Treinar 
